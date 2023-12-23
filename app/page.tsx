@@ -1,3 +1,4 @@
+import ListItem from "@/components/shared/ListItem";
 import Image from "next/image";
 
 export default function Home() {
@@ -19,56 +20,16 @@ export default function Home() {
         <button className="bg-sky-700 text-white rounded w-24">SAVE</button>
       </div>
       <div>
-        <div className="flex gap-5">
-          <p>asdf</p>
-          <span>:</span>
-          <p>asdf</p>
-        </div>
-        <div className="flex gap-5">
-          <p>asdf</p>
-          <span>:</span>
-          <p>asdf</p>
-        </div>
-        <div className="flex gap-5">
-          <p>asdf</p>
-          <span>:</span>
-          <p>asdf</p>
-        </div>
-        <div className="flex gap-5">
-          <p>asdf</p>
-          <span>:</span>
-          <p>asdf</p>
-        </div>  
-        <div className="flex gap-5">
-          <p>asdf</p>
-          <span>:</span>
-          <p>asdf</p>
-        </div>  
-        <div className="flex gap-5">
-          <p>asdf</p>
-          <span>:</span>
-          <p>asdf</p>
-        </div>  
-        <div className="flex gap-5">
-          <p>asdf</p>
-          <span>:</span>
-          <p>asdf</p>
-        </div>  
-        <div className="flex gap-5">
-          <p>asdf</p>
-          <span>:</span>
-          <p>asdf</p>
-        </div>  
-        <div className="flex gap-5">
-          <p>asdf</p>
-          <span>:</span>
-          <p>asdf</p>
-        </div>  
-        <div className="flex gap-5">
-          <p>asdf</p>
-          <span>:</span>
-          <p>asdf</p>
-        </div>  
+        <ListItem />
+        <ListItem />
+        <ListItem />
+        <ListItem />
+        <ListItem />
+        <ListItem />
+        <ListItem />
+        <ListItem />
+        <ListItem />
+        <ListItem />
       </div>
     </main>
   );
