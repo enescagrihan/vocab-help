@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import Header from "@/components/shared/Header";
+import ReactQueryProvider from "@/components/shared/ReactQueryProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,12 +18,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`flex flex-col min-h-screen justify-between p-8 font-mono`}>
-        <Header />
-        {children}
-        <Navbar />
-      </body>
-    </html>
+    <ReactQueryProvider>
+      <html lang="en">
+        <body
+          className={`flex flex-col min-h-screen justify-between p-8 font-mono`}
+        >
+          <Header />
+          {children}
+          <Navbar />
+        </body>
+      </html>
+    </ReactQueryProvider>
   );
 }
