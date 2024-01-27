@@ -1,4 +1,4 @@
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
 interface Data {
@@ -11,7 +11,7 @@ export const useGetTags = () => {
     queryKey: ["getAllTags"],
     queryFn: async () => {
       const { data } = await axios.get("http://localhost:5291/Tag");
-      return data as Data;
+      return data;
     },
   });
 };

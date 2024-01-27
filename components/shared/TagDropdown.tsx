@@ -2,16 +2,15 @@
 
 import { useGetTags } from "@/hooks/useTags";
 import { Dispatch, SetStateAction } from "react";
-import useSWR from "swr";
 
 interface TagDropdownProps {
-  url: string;
-  setSelectedTagId: Dispatch<SetStateAction<undefined>>;
+  setSelectedTagId: Dispatch<SetStateAction<number>>;
+  selectedTagId: number;
 }
 
 export default function TagDropdown({
   setSelectedTagId,
-  url,
+  selectedTagId,
 }: TagDropdownProps) {
   const { data: tags, isLoading: isLoading } = useGetTags();
 
@@ -22,10 +21,13 @@ export default function TagDropdown({
   return (
     <select
       className="border border-gray rounded"
-      onChange={(e) => setSelectedTagId(e.target.value)}
+      onChange={(e) => {
+        // @ts-ignore
+        setSelectedTagId(e.target.value);
+      }}
     >
-      <option value="" selected disabled hidden>
-        Select Tag
+      <option selected disabled>
+        Select Category
       </option>
       {tags.map((tag: any) => {
         return (
